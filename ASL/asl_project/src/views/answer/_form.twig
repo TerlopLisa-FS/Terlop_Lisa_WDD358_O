@@ -1,0 +1,16 @@
+{% if answer %}
+    <form action="/answers/{{answer.id}}" method="post">
+{% else %}
+<form action="/answers" method="post">
+{% endif %}
+
+    <div>
+    <label for="name">Answer: </label>
+    {% if answer %}
+        <input id="name" type="text" name="name" value="{{answer.name}}"/>
+    {% else %}
+        <input id="name" type="text" name="name"/>
+    {% endif %}
+    </div>
+    <input type="submit" value="Save Answer"/>
+</form>

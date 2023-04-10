@@ -1,0 +1,17 @@
+{% extends 'layouts/_default.twig' %}
+
+{% block main_content %}
+<ul>
+    {% for answer in answers  %}
+        <li>
+            {{ answer.name }} - 
+            <a href="/answers/{{answer.id}}/edit">Edit</a>
+            |
+            <a href="/answers/{{answer.id}}/delete">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
+<p>
+    <a href="/answers/new">Create New Answer</a>
+</p>
+{% endblock %}

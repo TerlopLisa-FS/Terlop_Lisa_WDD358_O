@@ -1,0 +1,11 @@
+{% extends 'layouts/_default.twig' %}
+
+{% block main_content %}
+<div>{{ answer.name }}</div>
+<p><strong>ID:</strong>{{answer.id}}</p>
+<p><strong>Created At: </strong>{{answer.createdAt}}</p>
+<p><strong>Updated Last:</strong>{{answer.updatedAt}}</p>
+<p>
+    <a href="/answers/{{answer.id}}/delete">Delete</a>
+</p>
+{% endblock %}
